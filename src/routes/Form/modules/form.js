@@ -77,6 +77,7 @@ export const filterTextEffect = data =>
 
 export const submitEffect = data =>
   submitIt(data)
+    .then(() => console.log(data)) // For presenting only
     .then(greeting)
     .catch(failure);
 

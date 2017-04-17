@@ -44,8 +44,6 @@ export default class Form extends React.Component {
 
     return (
       <div style={centringStyle}>
-        <input />
-        <input />
         { frozen ? <div className="ant-modal-mask"/> : null }
         { errors }
         {
