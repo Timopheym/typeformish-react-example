@@ -20,7 +20,7 @@ const karmaConfig = {
   preprocessors : {
     [`${project.dir_test}/test-bundler.js`] : ['webpack']
   },
-  browsers : ['PhantomJS'],
+  browsers : [/*'PhantomJS'*/ 'Chrome'],
   webpack  : {
     devtool : 'cheap-module-source-map',
     resolve : Object.assign({}, webpackConfig.resolve, {
@@ -54,7 +54,12 @@ const karmaConfig = {
   },
   coverageReporter : {
     reporters : project.coverage_reporters
-  }
+  },
+  browserConsoleLogOptions: {
+    level: 'log',
+    format: '%b %T: %m',
+    terminal: true,
+  },
 }
 
 if (project.globals.__COVERAGE__) {

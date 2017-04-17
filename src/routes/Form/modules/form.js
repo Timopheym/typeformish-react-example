@@ -1,3 +1,5 @@
+require('es6-symbol/implement');
+
 import * as Immutable from 'immutable';
 import {Effects, loop} from 'redux-loop';
 
@@ -27,10 +29,9 @@ function submitStep(value) {
   };
 }
 
-function submitForm(value) {
+function submitForm() {
   return {
-    type: SUBMIT_FORM,
-    payload: value,
+    type: SUBMIT_FORM
   };
 }
 
@@ -63,18 +64,18 @@ function goBack() {
 export const actions = {
   submitStep,
   submitForm,
-  goBack
+  goBack,
 };
 
 // ------------------------------------
 // Effects
 // ------------------------------------
-const filterTextEffect = data =>
+export const filterTextEffect = data =>
   checkIt(data)
     .then(() => processStep(data))
     .catch(failure);
 
-const submitEffect = data =>
+export const submitEffect = data =>
   submitIt(data)
     .then(greeting)
     .catch(failure);
