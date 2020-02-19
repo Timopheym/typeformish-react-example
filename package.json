@@ -127,7 +127,7 @@
     "chai-as-promised": "^6.0.0",
     "chai-enzyme": "^0.6.1",
     "cheerio": "^0.22.0",
-    "codecov": "^1.0.1",
+    "codecov": "^3.6.5",
     "enzyme": "^2.0.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
